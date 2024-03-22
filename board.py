@@ -11,9 +11,9 @@ class Board():
                            [1, 2, 5, 5, 2]]
         for i in range(5):
             for j in range(5):
-                
+                self.multiplier[i][j] = [math.cos(self.N / 2 * self.multiplier[i][j]), math.sin(self.N / 2 * self.multiplier[i][j])]
 
-        self.q1_prob = [[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
+        self.q1_prob = [[[1, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
                         [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
                         [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
                         [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
@@ -21,9 +21,12 @@ class Board():
         self.q2_prob = self.q1_prob
 
     def step(self):
-        for u in range(5):
-            for v in range(5):
-                self.q1_prob[u][v]
+        for x in range(5):
+            for y in range(5):
+                tot = [0, 0]
+                for u in range(5):
+                    for v in range(5):
+                        self.q1_prob[x][y]
                 
 
     def measure(self):
