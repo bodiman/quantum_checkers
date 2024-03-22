@@ -13,7 +13,7 @@ class Board():
             for j in range(5):
                 
 
-        self.q1_prob = [[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
+        self.q1_prob = [[[1, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
                         [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
                         [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
                         [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]],
@@ -33,3 +33,6 @@ class Board():
     def apply_pauli_matrix(self, pauli_matrix):
         #apply pauli matrix to active qbit
         pass
+
+    def propagate(self):
+        
